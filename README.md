@@ -8,6 +8,7 @@
 <!--START_SECTION:activity-->
 1. 🎉 Calculadora Climática:  Una Página web calculadora para consultar el gasto energético en casas.
 2. 🎉 Discord bot con IA: Creado para clasificar Pájaros y sugerir Comida para estos.
-3. 🎉 Diario web: Una Página web en la que se presenta un diario usando bases de datos para logueo y guardar entradas al diario. 
-4. 🎉 Portafolio para Diseñador web: Una página en donde se presenta un portafolio de servicios de programador propio, con una base de datos de comentarios. 
+3. 🎉 Colab with IA: Un repositorio donde se listan un par de códigos en colab con Inteligencia artificial para dos aplicaciones muy útiles. 
+4. 🎉 Generador de Memes: Una página en donde se pueden hacer los mejores memes de todos !
+5. 🎉 IA con reconocimiento de voz: Una página web en donde se reconoce la voz como entrada para poder completar el diario. 
 <!--END_SECTION:activity-->
