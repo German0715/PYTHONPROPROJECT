@@ -3,8 +3,6 @@
 <h2>Este proyecto es una calculadora climática en la que se está realizando una encuesta para averiguar el consumo eléctrico en casas. No tiene bases de datos.  .</h2>
 </div>
 
-:zap: Para utilizar este proyecto debes hacer: 
-
 <!--START_SECTION:activity-->
 :zap:DESCARGAR EL REPOSITORIO COMPLETO Y SUS CARPETAS 
 1. Tener instalado flask ```(pip install flask o si se usa entorno virtual pipenv install flask)```
