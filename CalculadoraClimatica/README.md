@@ -6,6 +6,7 @@
 :zap: Para utilizar este proyecto debes hacer: 
 
 <!--START_SECTION:activity-->
+:zap:DESCARGAR EL REPOSITORIO COMPLETO Y SUS CARPETAS 
 1. Tener instalado flask ```(pip install flask o si se usa entorno virtual pipenv install flask)```
 2. Ejecutar el archivo main.py    
 3. Este proyecto cuenta con un archivo Pipfile (entorno virtual) para instalarlo se puede usar el comando pipenv shell [GUIA DE ENTORNOS VIRTUALES](https://jarroba.com/pipenv-gestor-de-entornos-virtuales-de-python/) 
