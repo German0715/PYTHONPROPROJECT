@@ -3,7 +3,7 @@
 <h2>Este repositorio está creado para almacenar todos los proyectos útiles para desarrollar el proyecto final de Python Pro - KODLAND. Estos proyectos no tiene ánimo de lucro y su autor no se hace responsable del uso que se pueda hacer del mismo.</h2>
 </div>
 
-:zap: Repositorios que se encuentran aquí:
+:Zap:Repositorios que se encuentran aquí:
 
 <!--START_SECTION:activity-->
 1. 🎉 Calculadora Climática:  Una Página web calculadora para consultar el gasto energético en casas.
