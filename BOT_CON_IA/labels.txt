@@ -1,0 +1,7 @@
+0 Gorrion
+1 Buhos
+2 Tucanes
+3 Mirlas
+4 Palomas
+5 Aguilas
+6 Condor
