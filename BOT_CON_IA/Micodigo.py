@@ -1,4 +1,3 @@
-#Template para que usen con la clase BOT! 
 
 #Importando librerías (se modifica al gusto)
 
@@ -10,6 +9,18 @@ import random
 from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
+
+
+# Las sugerencias de comida asociadas a cada clase
+sugerencias_comida = {
+    "Gorrion": "Tu animal puede comer Semillas y frutas, recuerda que es importante para su supervivencia :hatching_chick:",
+    "Buhos": "A los Buhos les encanta comer Ratones pequeños y aves (LOL) :hatching_chick:",
+    "Tucanes": "A los tucanes, un animal hermoso, les encanta comer Frutas tropicales :hatching_chick:",
+    "Mirlas": " A las mirlas, un pajarito nativo de Colombia les encanta comer Insectos y frutas :hatching_chick:",
+    "Palomas": "Las palomas les encanta comer Semillas y granos :hatching_chick:",
+    "Aguilas": "Las aguilas son fáciles: Comen Carne fresca :hatching_chick:",
+    "Condor": "El cóndor, el ave representativa de Colombia come Carroña y animales pequeños :hatching_chick:",
+}
 
 
 def get_class(model_path, labels_path, image_path):
@@ -52,23 +63,31 @@ async def on_ready():
 
 #Así se hacen los comandos para que el bot opere
 @bot.command()  
-async def Saludo(ctx):   #De aquí depende el comando, el nombre que se pone aquí es el comando que el bot usará (!Micomando)
+async def Help(ctx):   #De aquí depende el comando, el nombre que se pone aquí es el comando que el bot usará (!Micomando)
     #AQUÍ VA EL FUNCIONAMIENTO DEL BOT, dependiendo de lo que quieran que haga
-    await ctx.send("Hola, funciono!")  #acá es lo que el BOT va a responderte cuando escribas !Micomando
+    await ctx.send("Hola, Soy un bot para generar sugerencias de comida dependiendo del tipo de animal que tengas! Envíame una foto de cualquier de estos animales junto al comando !Revisar y mira la magia: (Gorrion, Buhos, Tucanes ,Mirlas, Palomas, Aguilas, Condor)") #acá es lo que el BOT va a responderte cuando escribas !Micomando
 
 @bot.command()
 async def Revisar(ctx):
     if ctx.message.attachments: 
-        for attachments in ctx.message.attachments:
-            file_name=attachments.filename
-            file_url=attachments.url
+        for attachment in ctx.message.attachments:
+            file_name = attachment.filename
+            file_url = attachment.url
+
+            await attachment.save(f"./{file_name}")
             
-            await attachments.save(f"./{file_name}")
-            await ctx.send(get_class(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"./{file_name}") )
-            
+            # Obtener la clase inferida y la puntuación de confianza
+            class_name, confidence_score = get_class(model_path="./keras_model.h5", labels_path="labels.txt", image_path=f"./{file_name}")
+           
+            class_name = class_name.strip()
+            # Obtener la sugerencia de comida asociada a la clase inferida
+            sugerencia = sugerencias_comida.get(class_name, "No hay sugerencia de comida para esta clase")
+
+            # Enviar el resultado al canal de Discord
+            await ctx.send(f"Este es un pájaro de la clase: {class_name}\n\n Estoy seguro en un: {confidence_score:.2f}\n {sugerencia}")
+
     else:
         await ctx.send("Olvidaste subir tu imagen :( ") 
-            
-
+  
         
 bot.run("AQUI VA TU TOKEN")
