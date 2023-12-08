@@ -1,9 +1,3 @@
-https://colab.research.google.com/drive/1rJ_pWtZJnZA-0iiNwP8PvHbUaD85dt8K?usp=sharing
-
-https://colab.research.google.com/drive/1TCQIB7l-1E29yn9TUwMtezqrFZ73ycdd?usp=sharing
-
-
-
 <div align="center">
 <h1>💻 LINKS DE GOOGLE COLLAB - Proyectos con IA 💻</h1>
 <h2>Esta carpeta está dedicada a una compilación de proyectos desarrollados en Google Colaboratory en la que se utilizan modelos de inteligencia artificial, para usarlo, sigue los siguientes pasos:</h2>
