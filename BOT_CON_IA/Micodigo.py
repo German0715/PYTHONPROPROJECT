@@ -71,4 +71,4 @@ async def Revisar(ctx):
             
 
         
-bot.run("MTExNDYwMTAzNTU2MzAxMjE2OA.GqZ9iC.QZNg3t1TLq-WoujILOm-pihpgWQlR_PTfnPtOk")
+bot.run("AQUI VA TU TOKEN")
